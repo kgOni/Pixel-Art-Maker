@@ -19,6 +19,7 @@ event.preventDefault();
 }
 
 document.querySelector('#pixelCanvas') 
+//test 
 
 
 function makeGrid(x, y) {
