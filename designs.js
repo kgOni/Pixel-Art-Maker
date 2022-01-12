@@ -12,15 +12,16 @@ $(document).ready(function () {                         //waits, until the side 
             $('#pixelCanvas').append('<tr></tr>');
             for (var j = 1; j <= col; j++) {
                 $('tr:last').append('<td></td>');
+                $('td').attr("class", 'cells');
             }
         };
 
-        $('td').click(function () {
-            var color = $('#colorPicker').val();        //pick the color for the background
+        $('.cells').click(function () {
+            var paint = $('#colorPicker').val();        //pick the color for the background
             if ($(this).attr('style')) {
                 $(this).removeAttr('style')
             } else {
-                $(this).attr('style', 'background-color:' + color);
+                $(this).attr('style', 'background-color:' + paint);
             }
         });
     };
